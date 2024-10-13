@@ -84,7 +84,6 @@ header nav ul li a:hover {
 
 .intro-title:hover {
     transform: scale(1.1);
-    /* Увеличение на 10% */
 }
 
 .intro-info {
@@ -109,7 +108,6 @@ header nav ul li a:hover {
 
 .profile-img:hover {
     transform: scale(1.1);
-    /* Увеличение на 10% */
 }
 
 footer {
@@ -206,10 +204,9 @@ footer {
 }
 
 .education-timeline {
-    display: flex; /* Используем flexbox для выравнивания элементов в строку */
+    display: flex;
     justify-content: space-between;
-    gap: 30px; /* Распределяем пространство между элементами */
- /* Отступ сверху и снизу */
+    gap: 30px; 
   }
   .education-timeline li {
     display: flex;
@@ -220,8 +217,8 @@ footer {
   }
   
   .timeline-image {
-    width: 100%; /* Ширина изображения 100% для заполнения контейнера */
-    height: auto; /* Высота авто для сохранения пропорций */
+    width: 100%; 
+    height: auto; 
     border-radius: 10px;
     max-width: 500px;
     margin-bottom: 15px;
@@ -235,7 +232,6 @@ footer {
 
   .education-table {
     width: 100%;
-    border-collapse: collapse;
     margin-top: 20px;
 }
 
@@ -246,51 +242,96 @@ footer {
 }
 
 .education-table th {
-    background-color: #fed0f3; /* Header color */
+    background-color: #fed0f3; 
     color: #333;
     margin: 30px;
 }
 
 .education-table tr:nth-child(even) {
-    background-color: #f2f2f2; /* Color for even rows */
+    background-color: #f2f2f2; 
 }
 
 .education-table tr:hover {
-    background-color: #ddd; /* Hover color */
+    background-color: #ddd; 
 }
   
 /* Hobbies Page */
 .hobbies {
-    padding: 50px;
     text-align: center;
 }
 
-.hobbies h1 {
+.hobby-title {
+
     color: #FF69B4;
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-size: 3.7rem;
+    font-family: 'Catilde', sans-serif;
+    transition: transform 0.3s ease;
+    
+}
+
+.hobby-title:hover {
+    transform: scale(1.1);
 }
 
 .hobbies-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
+    justify-items: center;
+    align-items: start;
     margin-top: 30px;
+    align-items: stretch;
 }
 
 .hobby {
     background-color: #fff;
-    border: 2px solid #E0FFFF;
+    border: 2px solid #fed0f3;
     padding: 20px;
     border-radius: 10px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    max-width: 300px;
+
 }
 
-.hobby:hover {
-    transform: translateY(-10px);
+.hobby img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
 }
 
 .hobby h2 {
     color: #20B2AA;
+    font-size: 24px;
+    margin-top: 10px;
 }
+
+.hobby p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.hobby:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hobby:hover img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .hobbies-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
 
 /* Contact Page */
 .contact {
@@ -340,12 +381,11 @@ footer {
 }
 
 .social-medias__svg {
-    width: 70px; /* уменьшено с 100px */
-    height: 70px; /* уменьшено с 100px */
+    width: 70px; 
+    height: 70px; 
     margin: 0 15px;
     transition: transform 0.3s ease-in-out;
     fill: #000000;
-    /* color: red; */
 }
 
 .social-medias__svg:hover {
@@ -366,43 +406,6 @@ footer p {
     font-size: 0.9rem;
 }
 
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
-
-form label {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-}
-
-form input,
-form textarea {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 2px solid #FF69B4;
-    border-radius: 5px;
-    font-size: 1rem;
-    width: 100%;
-}
-
-form button {
-    padding: 10px 20px;
-    background-color: #FF69B4;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-form button:hover {
-    background-color: #ff85a2;
-}
 @media (max-width: 1100px) {
     .family-grid,
     .hobbies-grid {
@@ -437,5 +440,7 @@ form button:hover {
     .hobbies-grid {
         grid-template-columns: 1fr;
     }
+
+
 
 }
