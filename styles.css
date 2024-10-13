@@ -345,6 +345,7 @@ footer {
     margin: 0 15px;
     transition: transform 0.3s ease-in-out;
     fill: #000000;
+    /* color: red; */
 }
 
 .social-medias__svg:hover {
